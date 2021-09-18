@@ -42,6 +42,11 @@ export const SectionTop = styled.section`
           border-radius: 50%;
           height: 180px;
           width: 180px;
+        ${media.lessThan("medium")`
+          width: 250px;
+          height: 250px;
+        `}
+
           }
        p {
         width: 100%;

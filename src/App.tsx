@@ -9,6 +9,8 @@ import { Header } from './components/Header/index';
 import { Section } from './components/SectionTop/index';
 import { Tecnologias } from './components/sectionTecnologias';
 import { Projetos } from './components/sectionProjetos';
+import { Contato } from './components/Contato';
+import { Footer } from './components/Footer';
 
 function App() {
   const [theme, setTheme] = useState(dark)
@@ -24,7 +26,8 @@ function App() {
       <Section />
       <Tecnologias />
       <Projetos />
-
+      <Contato />
+      <Footer />
     </ThemeProvider>
   );
 }
