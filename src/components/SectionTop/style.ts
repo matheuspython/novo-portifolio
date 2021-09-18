@@ -18,7 +18,18 @@ export const SectionTop = styled.section`
       display: flex;
       justify-content: center;
       align-items: center;
+      .some{
+        opacity: 0;
+        position: relative;
+        top: -20px;
+      }
+      .aparece{
+        position: relative;
+        top: 0;
+        opacity: 1;
+      }
       .eu{
+        transition: all .4s;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -34,7 +45,9 @@ export const SectionTop = styled.section`
           text-align: center;
           padding: 20px;
         `}
-
+        h2{
+          transition: all .4s;
+        }
         .my-img{
           margin: 10px auto;
           background-size: cover;

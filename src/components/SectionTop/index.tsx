@@ -1,18 +1,35 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import {SectionTop}from './style'
 
 import linkedin from "../../images/github.png"
 import github from "../../images/linkedin.png"
 
 export const Section: React.FC = ()=>{
+  const [opacidade, setOpacidade] = useState('some')
+  let [meunome,setMeunome] = useState(' ')
+  let [textoSobre, setTextoSobre] = useState(' ')
+
+  const matheus = 'MATHEUS F. SOUZA'
+  const marketinSplit = matheus.split('')
+ 
+  const sobreMim = 'sou programador desde os meus 16 anos me interessei muito pela area do desenvolvimento web foi paixão a primeira vista desde então venho estudando para cada dia me tornar um programador e pessoa melhor atualmente sou freelancer veja alguns de meus projetos e skils logo abaixo'
+  const marketinSplit2 = sobreMim.split('')
+ 
+  setTimeout(()=>{
+    setOpacidade('aparece')
+  },1000)
+  useEffect(()=> marketinSplit.forEach((letra, i) => { setTimeout(()=>setMeunome(meunome += letra), 150 * i)}),[])
+  useEffect(()=> marketinSplit2.forEach((letra, i) => { setTimeout(()=>setTextoSobre(textoSobre += letra), 100 * i)}),[])
+  
+
   return (
     <SectionTop>
       <div className="container">
-        <div className="eu">
+        <div className={`eu ${opacidade}`}>
         <img className="my-img" src="https://github.com/matheuspython.png" alt="minha imagem" />
             <div className="text-wraper-box">
-                <h2>MATHEUS F. SOUZA</h2>
-                <p>programador focado no front end(parte visual do site) você pode ver alguns de meus projetos no GitHub</p>
+                <h2>{meunome}</h2>
+                <p>{textoSobre}</p>
                 <ul>
                     <li>
                         <a title="link para o meu github" target="_blanck" href="https://github.com/matheuspython">
