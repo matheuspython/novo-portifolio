@@ -18,7 +18,9 @@ export const Section: React.FC = ()=>{
   setTimeout(()=>{
     setOpacidade('aparece')
   },1000)
+  // eslint-disable-next-line
   useEffect(()=> marketinSplit.forEach((letra, i) => { setTimeout(()=>setMeunome(meunome += letra), 150 * i)}),[])
+ // eslint-disable-next-line
   useEffect(()=> marketinSplit2.forEach((letra, i) => { setTimeout(()=>setTextoSobre(textoSobre += letra), 100 * i)}),[])
   
 
